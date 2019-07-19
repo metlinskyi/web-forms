@@ -1,0 +1,2 @@
+﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="Web.CodeBehind.Controls.UserLink" %>
+<a class="nav-link" runat="server" href="~/{culture}/account"><asp:Image runat="server" ImageUrl="~/Content/es-US.png" Width="32px" /></a>
