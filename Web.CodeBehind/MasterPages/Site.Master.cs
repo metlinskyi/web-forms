@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace Web.CodeBehind.MasterPages
 {
-    public partial class SiteMaster : MasterPage
+    public partial class SiteMaster : Abstracts.CultureMasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

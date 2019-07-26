@@ -60,6 +60,10 @@
     <Compile Include="Controls\UserProfile.properties.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="CultureHelper.cs" />
+    <Compile Include="MasterPages\Abstracts\CultureMasterPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="MasterPages\Site.Master.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -72,7 +76,7 @@
     <Compile Include="Pages\Account.properties.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Pages\Abstracts\PublicPage.cs">
+    <Compile Include="Pages\Abstracts\CulturePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Default.cs">
