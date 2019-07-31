@@ -187,10 +187,15 @@
     <Content Include="Scripts\popper-utils.js.map" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_GlobalResources\UI.Designer.cs">
+    <Compile Include="App_GlobalResources\UI.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UI.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\UI.es-MX.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UI.es-MX.resx</DependentUpon>
     </Compile>
     <Compile Include="App_GlobalResources\UI.es-US.designer.cs">
       <AutoGen>True</AutoGen>
@@ -236,13 +241,19 @@
   <ItemGroup>
     <Content Include="App_GlobalResources\UI.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
-      <LastGenOutput>UI.Designer.cs</LastGenOutput>
+      <LastGenOutput>UI.designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_GlobalResources\UI.es-US.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>UI.es-US.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\UI.es-MX.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>UI.es-MX.designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <PropertyGroup>

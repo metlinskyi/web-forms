@@ -9,7 +9,7 @@ Set a default culture.
 
 ```XML
 <system.web>
-    <globalization uiCulture="en" culture="en" />
+    <globalization uiCulture="en-US" culture="en-US" />
 ```
 
 Set extend Asp.Net localization controls.
@@ -26,7 +26,7 @@ Create culture resource files.
 ```
 .
 +-- App_GlobalResources
-|   +-- UI.resx             // common resource
+|   +-- UI.resx             // default resource
 |   +-- UI.es-US.resx       // localized resource
 ```
 
@@ -56,7 +56,7 @@ When the route handler does not find a specific culture page, then system to get
 ```
 .
 +-- Pages
-|   +-- Account.aspx            // common page 
+|   +-- Account.aspx            // common page
 |   +-- Account.es-US.aspx      // specific page 
 ```
 
