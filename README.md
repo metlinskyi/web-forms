@@ -101,7 +101,6 @@ All finding process is cached, for exmaple:
 // Trying to find a valid template path in a cache.
 var key = string.Concat(culture, AppRelativeVirtualPath);
 var appRelativeVirtualPath = Cache[key] as string;
-
 if (string.IsNullOrEmpty(appRelativeVirtualPath))
 {
     // The template path not found in cache, creating a new template path with current culture.
