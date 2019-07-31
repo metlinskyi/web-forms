@@ -4,6 +4,3 @@
 <br>
 <asp:TextBox runat="server" ID="Name" />
 <br>
-<asp:Label runat="server" Text="<%$ Resources: UI, SSN %>" />
-<br>
-<asp:TextBox runat="server" ID="SSN" />

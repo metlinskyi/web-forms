@@ -1,5 +1,4 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="Web.CodeBehind.MasterPages.SiteMaster" %>
-<%@ Register TagName="UserLink" TagPrefix="account" Src="~/Controls/UserLink.ascx" %>
 <!DOCTYPE html>
 <html lang="<% Response.Write(System.Globalization.CultureInfo.CurrentCulture.Name); %>">
 <head runat="server">
@@ -53,7 +52,14 @@
                     <li class="nav-item"><a class="nav-link" runat="server" href="~/{culture}/?contact">
                         <asp:Literal runat="server" Text="<%$ Resources: UI, ContactTitle %>" /></a></li>
                     <li class="nav-item">
-                        <account:UserLink runat="server" />
+                        <asp:Localization runat="server">
+                            <asp:Culture runat="server">
+                                <a class="nav-link" runat="server" href="~/{culture}/Account"><asp:Literal runat="server" Text="<%$ Resources: UI, AccountTitle %>" /></a>
+                            </asp:Culture>
+                            <asp:Culture runat="server" Name="es-US">
+                                <a class="nav-link" runat="server" href="~/{culture}/account"><asp:Image runat="server" ImageUrl="~/Content/es-US.png" Width="32px" /></a>
+                            </asp:Culture>
+                        </asp:Localization>
                     </li>
                 </ul>
             </div>

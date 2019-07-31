@@ -126,6 +126,9 @@
   <data name="DefaultTitle" xml:space="preserve">
     <value>Página de inicio</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
   <data name="UserProfile" xml:space="preserve">
     <value>Perfil del usuario</value>
   </data>

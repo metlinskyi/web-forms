@@ -7,7 +7,7 @@ using System.Web.Compilation;
 using System.Web.Routing;
 using System.Web.UI;
 
-namespace Web.Site
+namespace Web.Localization.Routing
 {
     /// <summary>
     /// <see cref="System.Web.Routing.IRouteHandler"/> implementation for routing pages with language difference.

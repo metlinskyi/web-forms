@@ -105,8 +105,7 @@
   <ItemGroup>
     <Content Include="Content\es-US.png" />
     <Content Include="Controls\UserImage.ascx" />
-    <Content Include="Controls\UserLink.es-US.ascx" />
-    <Content Include="Controls\UserLink.ascx" />
+    <Content Include="Controls\UserProfile.es-US.ascx" />
     <Content Include="Controls\UserProfile.ascx" />
     <Content Include="Pages\Account.es-US.aspx" />
     <Content Include="Pages\Account.aspx" />
@@ -182,7 +181,6 @@
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper-utils.min.js.map" />
     <Content Include="Scripts\umd\popper-utils.js.map" />
-    <Content Include="Scripts\README.md" />
     <Content Include="Scripts\popper.min.js.map" />
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
@@ -200,12 +198,12 @@
       <DependentUpon>UI.es-US.resx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Code\CultureRouteHandler.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Global.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Code\" />
     <Folder Include="App_Themes\Default\" />
   </ItemGroup>
   <ItemGroup>
@@ -229,6 +227,10 @@
     <ProjectReference Include="..\Web.CodeBehind\Web.CodeBehind.csproj">
       <Project>{368f33bd-854a-469e-8b53-f3b56e7024d2}</Project>
       <Name>Web.CodeBehind</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Web.Localization\Web.Localization.csproj">
+      <Project>{c7cbf0e0-54b8-45a8-8b00-c52a6f2ced3e}</Project>
+      <Name>Web.Localization</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

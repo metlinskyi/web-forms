@@ -1,5 +1,6 @@
 using Microsoft.AspNet.FriendlyUrls;
 using System.Web.Routing;
+using Web.Localization.Routing;
 
 namespace Web.Site
 {

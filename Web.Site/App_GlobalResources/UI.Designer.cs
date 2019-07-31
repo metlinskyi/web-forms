@@ -106,11 +106,29 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Español.
         /// </summary>
         internal static string Spanish {
             get {
                 return ResourceManager.GetString("Spanish", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SSN.
+        /// </summary>
+        internal static string SSN {
+            get {
+                return ResourceManager.GetString("SSN", resourceCulture);
             }
         }
         

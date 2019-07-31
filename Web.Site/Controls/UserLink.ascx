@@ -1,2 +1,0 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" Inherits="Web.CodeBehind.Controls.UserLink" %>
-<a class="nav-link" runat="server" href="~/{culture}/Account"><asp:Literal runat="server" Text="<%$ Resources: UI, AccountTitle %>" /></a>
