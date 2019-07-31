@@ -2,7 +2,7 @@
 using System.Globalization;
 using System.Web.UI;
 
-namespace Web.CodeBehind.Controls.Abstracts
+namespace Web.Localization.UI
 {
     /// <summary>
     /// Localized base <see cref="UserControl"/> 

@@ -1,6 +1,6 @@
 ﻿using System.Web.UI;
 
-namespace Web.CodeBehind.MasterPages.Abstracts
+namespace Web.Localization.UI
 {
     /// <summary>
     /// Localized base <see cref="MasterPage"/> 

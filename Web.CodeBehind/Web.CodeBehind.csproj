@@ -42,9 +42,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\Abstracts\CultureUserControl.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
     <Compile Include="Controls\UserImage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
@@ -52,10 +49,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Controls\UserProfile.properties.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CultureHelper.cs" />
-    <Compile Include="MasterPages\Abstracts\CultureMasterPage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="MasterPages\Site.Master.cs">
@@ -68,9 +61,6 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Account.properties.cs">
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Pages\Abstracts\CulturePage.cs">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\Default.cs">

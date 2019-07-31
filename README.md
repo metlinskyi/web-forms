@@ -78,3 +78,12 @@ Different culture templates on a page.
     </asp:Culture>
 </asp:Localization>
 ```
+
+Different culture templates of UserControl.
+
+```
+.
++-- Controls
+|   +-- UserProfile.ascx
+|   +-- UserProfile.es-US.ascx
+```
