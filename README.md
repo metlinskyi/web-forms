@@ -1,6 +1,7 @@
 # Asp.Net Web Froms Localization
 
 The proof of concept application with demonstration of localization for Asp.Net Web Froms.
+The main target is minimize of copying a code.
 
 #### Web.config
 
@@ -25,8 +26,8 @@ Create culture resource files.
 ```
 .
 +-- App_GlobalResources
-|   +-- UI.resx
-|   +-- UI.es-US.resx
+|   +-- UI.resx             // common resource
+|   +-- UI.es-US.resx       // localized resource
 ```
 
 Using the expression builder in the ASP.NET Web Form page.
@@ -49,16 +50,18 @@ routes.Add(new Route(string.Empty, handler));
 routes.Add(new Route("{culture}/{*page}", handler));
 ```
 
-Different culture pages.
+Different culture pages. 
+When the route handler does not find a specific culture page, then system to get a default page.
 
 ```
 .
 +-- Pages
-|   +-- Account.aspx
-|   +-- Account.es-US.aspx
+|   +-- Account.aspx            // common page 
+|   +-- Account.es-US.aspx      // localized page 
 ```
 
 Use links with {culture} tag.
+All values of href or src attributes with {culture}  tag will be replaced to current culture.
 
 ```ASP
 <a runat="server" href="~/{culture}/Account"><asp:Literal runat="server" Text="<%$ Resources: UI, AccountTitle %>" /></a>
@@ -67,6 +70,7 @@ Use links with {culture} tag.
 #### UI
 
 Different culture templates on a page.
+If the Localization control does not find a specific culture template, then will be rendered a default template.
 
 ```ASP
 <asp:Localization runat="server">
@@ -74,16 +78,17 @@ Different culture templates on a page.
         <!-- Default template for all cultures -->
     </asp:Culture>
     <asp:Culture runat="server" Name="es-US">
-        <!-- Specified es-US culture template -->
+        <!-- Specific es-US culture template -->
     </asp:Culture>
 </asp:Localization>
 ```
 
 Different culture templates of UserControl.
+If a UserControl does not find a specific culture template, then will be rendered a default template.
 
 ```
 .
 +-- Controls
-|   +-- UserProfile.ascx
-|   +-- UserProfile.es-US.ascx
+|   +-- UserProfile.ascx          // common control template 
+|   +-- UserProfile.es-US.ascx    // localized control template
 ```
