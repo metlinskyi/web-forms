@@ -51,13 +51,13 @@ routes.Add(new Route("{culture}/{*page}", handler));
 ```
 
 Different culture pages. 
-When the route handler does not find a specific culture page, then system to get a default page.
+When the route handler does not find a specific culture page, then system to get a common page.
 
 ```
 .
 +-- Pages
 |   +-- Account.aspx            // common page 
-|   +-- Account.es-US.aspx      // localized page 
+|   +-- Account.es-US.aspx      // specific page 
 ```
 
 Use links with {culture} tag.
@@ -90,5 +90,33 @@ If a UserControl does not find a specific culture template, then will be rendere
 .
 +-- Controls
 |   +-- UserProfile.ascx          // common control template 
-|   +-- UserProfile.es-US.ascx    // localized control template
+|   +-- UserProfile.es-US.ascx    // specific control template
+```
+
+#### Performance
+
+All finding process is cached, for exmaple:
+
+```C#
+// Trying to find a valid template path in a cache.
+var key = string.Concat(culture, AppRelativeVirtualPath);
+var appRelativeVirtualPath = Cache[key] as string;
+
+if (string.IsNullOrEmpty(appRelativeVirtualPath))
+{
+    // The template path not found in cache, creating a new template path with current culture.
+    appRelativeVirtualPath = AppRelativeVirtualPath.Replace(".ascx", $".{culture}.ascx");
+
+    try
+    {
+        // Trying to load the localized template.
+        template = LoadTemplate(appRelativeVirtualPath);
+        Cache[key] = appRelativeVirtualPath;
+    }
+    catch
+    {
+        // The localized template not found, will be use default.
+        Cache[key] = appRelativeVirtualPath = AppRelativeVirtualPath;
+    }
+}
 ```
