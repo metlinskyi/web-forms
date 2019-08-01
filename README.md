@@ -1,7 +1,7 @@
 # Asp.Net Web Froms Localization
 
 The proof of concept application with demonstration of localization for Asp.Net Web Froms.
-The main target is minimize of copying a code.
+The main target is to minimize the copying of a code.
 
 #### Web.config
 
@@ -30,7 +30,7 @@ Create culture resource files.
 |   +-- UI.es-US.resx       // localized resource
 ```
 
-Using the expression builder in the ASP.NET Web Form page.
+Use the expression builder in the ASP.NET Web Form page.
 
 ```ASP
 <asp:Literal runat="server" Text="<%$ Resources: UI, BrandName %>" />
@@ -51,7 +51,7 @@ routes.Add(new Route("{culture}/{*page}", handler));
 ```
 
 Different culture pages. 
-When the route handler does not find a specific culture page, then system to get a common page.
+When the route handler does not find a specific culture page, then system will get a common page.
 
 ```
 .
@@ -61,7 +61,7 @@ When the route handler does not find a specific culture page, then system to get
 ```
 
 Use links with {culture} tag.
-All values of href or src attributes with {culture}  tag will be replaced to current culture.
+All values of 'href' or 'src' attributes with {culture} tag will be replaced to current culture.
 
 ```ASP
 <a runat="server" href="~/{culture}/Account"><asp:Literal runat="server" Text="<%$ Resources: UI, AccountTitle %>" /></a>
@@ -70,7 +70,7 @@ All values of href or src attributes with {culture}  tag will be replaced to cur
 #### UI
 
 Different culture templates on a page.
-If the Localization control does not find a specific culture template, then will be rendered a default template.
+If the Localization control does not find a specific culture template, then a default template will be rendered.
 
 ```ASP
 <asp:Localization runat="server">
@@ -84,7 +84,7 @@ If the Localization control does not find a specific culture template, then will
 ```
 
 Different culture templates of UserControl.
-If a UserControl does not find a specific culture template, then will be rendered a default template.
+If a UserControl does not find a specific culture template, then a default template will be rendered.
 
 ```
 .
@@ -95,7 +95,7 @@ If a UserControl does not find a specific culture template, then will be rendere
 
 #### Performance
 
-All finding process is cached, for exmaple:
+All searching process results will be cached, for example:
 
 ```C#
 // Trying to find a valid template path in a cache.
