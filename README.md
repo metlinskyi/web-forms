@@ -122,4 +122,4 @@ if (string.IsNullOrEmpty(appRelativeVirtualPath))
 
 &nbsp;
 ============
-&copy; [The best software engineer in the Universe!](https://www.linkedin.com/in/metlinskyi/)
+&copy; [The Best Software Engineer In The Universe!](https://www.linkedin.com/in/metlinskyi/)
